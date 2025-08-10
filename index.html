@@ -19,13 +19,12 @@
   body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9; /* হালকা গ্রে ব্যাকগ্রাউন্ড */
+    background-color: #f4f4f9;
     color: #222;
   }
 
-  /* হেডার ও নেভিগেশন */
   header {
-    background-color: #4CAF50; /* সবুজ রঙের ব্যাকগ্রাউন্ড */
+    background-color: #4CAF50;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 20px 0;
     position: relative;
@@ -50,12 +49,11 @@
 
   h1 {
     font-size: 1.8rem;
-    color: #fff; /* হেডার টেক্সট সাদা */
+    color: #fff;
     font-weight: 700;
     letter-spacing: 1px;
   }
 
-  /* নেভিগেশন মেনু */
   nav {
     display: flex;
     justify-content: center;
@@ -64,7 +62,7 @@
   }
 
   nav a {
-    color: #fff; /* নেভিগেশন লিংক সাদা */
+    color: #fff;
     margin: 10px 20px;
     text-decoration: none;
     font-weight: 500;
@@ -75,11 +73,16 @@
   }
 
   nav a:hover {
-    background-color: #66bb6a; /* হোভার কালার */
+    background-color: #66bb6a;
     transform: scale(1.05);
   }
 
-  /* কন্টেন্ট */
+  /* নতুন স্টাইল */
+  nav a.meter {
+    background-color: #66bb6a;
+    color: #fff;
+  }
+
   .container {
     max-width: 1200px;
     margin: 30px auto;
@@ -87,11 +90,12 @@
   }
 
   section {
-    background-color: #fff; /* সেকশনের ব্যাকগ্রাউন্ড সাদা */
+    background-color: #fff;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
   section:hover {
@@ -101,13 +105,12 @@
 
   h2 {
     font-size: 2rem;
-    color: #4CAF50; /* সবুজ রঙের হেডিং */
+    color: #4CAF50;
     margin-bottom: 20px;
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
   }
 
-  /* সার্ভিস grid */
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -115,7 +118,7 @@
   }
 
   .service-box {
-    background-color: #e8f5e9; /* হালকা সবুজ রঙ */
+    background-color: #e8f5e9;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -129,26 +132,25 @@
 
   .service-box i {
     font-size: 2.5rem;
-    color: #388E3C; /* ডার্ক গ্রীন */
+    color: #388E3C;
     margin-bottom: 15px;
   }
 
   .service-box h3 {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #2E7D32; /* ডার্ক সবুজ */
+    color: #2E7D32;
   }
 
-  /* মতামত সেকশন */
   #testimonials {
-    background-color: #ffe0b2; /* হালকা কমলা রঙ */
+    background-color: #ffe0b2;
     padding: 40px 20px;
   }
 
   #testimonials h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #E65100; /* গাঢ় কমলা রঙ */
+    color: #E65100;
   }
 
   .testimonial {
@@ -178,23 +180,20 @@
     color: #555;
   }
 
-  /* যোগাযোগের বিস্তারিত */
   .contact-details p {
     margin: 10px 0;
     font-size: 1.1rem;
     color: #444;
   }
 
-  /* ফুটার */
   footer {
-    background-color: #4CAF50; /* সবুজ ব্যাকগ্রাউন্ড */
-    color: #fff; /* সাদা টেক্সট */
+    background-color: #4CAF50;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
     font-size: 0.95rem;
   }
 
-  /* এনিমেশন */
   @keyframes slideDown {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -211,10 +210,12 @@
   <!-- নেভিগেশন -->
   <nav>
     <a href="#home">Home</a>
-    <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
     <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <!-- নতুন ক্লাস যুক্ত -->
+    <a href="#meter-application" class="meter">মিটার আবেদন</a>
   </nav>
 </header>
 
@@ -255,9 +256,10 @@
         <i class="fas fa-bolt"></i>
         <h3>প্রিন্টিং ও ডিজিটাল প্রিন্ট</h3>
       </div>
+      <!-- পরিবর্তিত অংশ -->
       <div class="service-box">
-        <i class="fas fa-user-tie"></i>
-        <h3>অফিস ও ব্যবসায়িক কাজ</h3>
+        <i class="fas fa-briefcase"></i>
+        <h3>সরকারী ও বেসরকারী চাকুরীর আবেদন</h3>
       </div>
       <div class="service-box">
         <i class="fas fa-mobile-alt"></i>
@@ -291,10 +293,14 @@
         <i class="fas fa-file-invoice-dollar"></i>
         <h3>ক্যাশ মেমো, ভিজিটিং কার্ড</h3>
       </div>
+      <div class="service-box">
+        <i class="fas fa-file-contract"></i>
+        <h3>মিটার আবেদন</h3>
+      </div>
     </div>
   </section>
 
-  <!-- মতামত সেকশন এখানে, এখন পেজের নিচে -->
+  <!-- মতামত সেকশন -->
   <section id="testimonials">
     <h2>গ্রাহকের মতামত</h2>
     <div class="testimonial">
